@@ -1,0 +1,5 @@
+.venv/
+.aws/
+1_s3_practice/
+__pycache__/
+*.env
