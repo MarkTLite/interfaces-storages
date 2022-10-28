@@ -19,11 +19,13 @@ class FileSystemProvider(StorageInterface):
         return self.copy_file(source_uri, dest_url)
         
     def get_secure_file_url(self, path: str):
+        if path is None:
+                return (False, 'Error')
         return (True, "")
 
-    def delete_file(self, path: str) -> tuple:
-        path = self.base_path + path
+    def delete_file(self, path: str) -> tuple:        
         try:
+            path = self.base_path + path
             os.remove(path)
             print(f'File at {path} deleted succesfully')
             return (True, "File deleted")
@@ -45,8 +47,9 @@ class FileSystemProvider(StorageInterface):
             return (False, 'Error')
         
     def list_files_in_directory(self, dir: str):
-        path = self.base_path + dir
+        
         try:
+            path = self.base_path + dir
             with os.scandir(path) as entries:
                 for entry in entries:
                     print(entry.name)
@@ -67,8 +70,9 @@ class FileSystemProvider(StorageInterface):
             return (False, 'Error')
 
     def create_directory(self, dir: str):
-        dir = self.base_path + dir
+        
         try:
+            dir = self.base_path + dir
             os.mkdir(dir)
             print(f'Directory: {dir} succesfully created')
             return (True, 'Directory created')
@@ -77,14 +81,13 @@ class FileSystemProvider(StorageInterface):
             print(f'Error: {err}')
             return (False, 'Error')
 
-    def delete_directory(self, dir: str):
-        dir = self.base_path + dir
+    def delete_directory(self, dir: str):        
         try:
+            dir = self.base_path + dir
             shutil.rmtree(dir)
             print(f'Directory: {dir} succesfully deleted')
             return (True, 'Directory deleted')
 
         except(Exception, OSError) as e:
-            print(f'Error: {dir} : {e.strerror}')
             return (False, 'Error')
 
