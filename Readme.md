@@ -6,7 +6,7 @@
 ## Description
  This project involves the application of design patterns to develop an image storage app with the following advantages:
  - High extensibility (Storage Providers like dropbox can be added without complicating the codebase at all)
- - Dependency change does not fail the system.
+ - Dependency change does not fail the system
 
 ## Concepts applied
 - Storage providers: aws_S3, local disk storage

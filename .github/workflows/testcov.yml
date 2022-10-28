@@ -29,7 +29,7 @@ jobs:
         aws_secret_access_key : ${{ secrets.AWS_SECRET_ACCESS_KEY}}
         region : ${{ secrets.REGION}}
       run: |
-        coverage run tests\test_storages.py aws_s3 && coverage run -a tests\test_storages.py filesystem
+        coverage run tests/test_storages.py aws_s3 && coverage run -a tests/test_storages.py filesystem
         coverage report
     - name: Upload coverage to Codecov
       uses: codecov/codecov-action@v1 
