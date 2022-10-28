@@ -95,14 +95,14 @@ class TestAllStorage(unittest.TestCase):
         returned = self.instance.check_if_file_exists(file_uri)
         self.assertEqual(returned, expected, f"Check {self.store_name} File doesnot exist test")
 
-    def test_9_create_directory(self):
+    def test_10_create_directory(self):
         self.instance = self.storage_service()
         folder = '/createdir'
         expected = (True, 'Directory created')
         returned = self.instance.create_directory(folder)
         self.assertEqual(returned, expected, f"Check {self.store_name} Create dir test")
     
-    def test_10_delete_directory(self):
+    def test_9_delete_directory(self):
         self.instance = self.storage_service()
         folder = '/createdir'
         expected = (True, 'Directory deleted')
@@ -162,14 +162,14 @@ class TestAllStorage(unittest.TestCase):
         returned = self.instance.list_images(directory=dir)
         self.assertIn(False, returned, f"Check {self.store_name} List files fail test")
 
-    def test_18_fail_create_directory(self):
+    def test_19_fail_create_directory(self):
         self.instance = self.storage_service()
         folder = None
         expected = (False, 'Error')
         returned = self.instance.create_directory(folder)
         self.assertEqual(returned, expected, f"Check {self.store_name} Create dir test")
     
-    def test_19_fail_delete_directory(self):
+    def test_18_fail_delete_directory(self):
         self.instance = self.storage_service()
         folder = None
         expected = (False, 'Error')
