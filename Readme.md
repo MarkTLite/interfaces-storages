@@ -1,5 +1,5 @@
 # Interfaces (Storages)
-[![codecov](https://codecov.io/gh/MarkTLite/chat-cli-kafka/branch/main/graph/badge.svg?token=D1GG1EUSJL)](https://codecov.io/gh/MarkTLite/chat-cli-kafka)
+[![codecov](https://codecov.io/gh/MarkTLite/interfaces-storages/branch/main/graph/badge.svg?token=D1GG1EUSJL)](https://codecov.io/gh/MarkTLite/interfaces-storages)
 ![Test status](https://github.com/MarkTLite/interfaces-storages/actions/workflows/testcov.yml/badge.svg)
 ![Build Status](https://github.com/MarkTLite/landing-page-react/actions/workflows/heroku_deployer.yaml/badge.svg)
 
