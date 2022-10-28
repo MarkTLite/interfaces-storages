@@ -1,7 +1,3 @@
-import os
-
-from providers.file_system_provider import FileSystemProvider
-from providers.s3_storage_provider import AwsS3Provider
 from storage_interface import StorageInterface
 
 class ImageStorageCLI:
