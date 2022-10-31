@@ -42,7 +42,7 @@ Add these files in the /providers folder before running.
 ### .env for aws_s3
     aws_access_key_id = ***
     aws_secret_access_key = ***
-    region=****
+    region=***
 
 
 
